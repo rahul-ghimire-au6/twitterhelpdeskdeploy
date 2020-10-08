@@ -2,7 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv")
 dotenv.config()
 const passport = require("passport");
-const session = require("express-session");
+const session = require("cookie-session");
 const morgan = require('morgan');
 const { sign } = require("jsonwebtoken")
 const { Strategy: TwitterStrategy } = require("passport-twitter");
