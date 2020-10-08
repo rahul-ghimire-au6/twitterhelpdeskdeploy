@@ -55,7 +55,7 @@ passport.use(
     {
       consumerKey: 'JAABlOt9wzw9dyr8SASkPjRrj',
       consumerSecret: 'ki0m1aFKtdYisdalDQUOHnfOS0EI5XC1Iez1xbhx0Htox2NwrI',
-      callbackURL: "http://127.0.0.1:3000",
+      callbackURL: "https://twitter-159.herokuapp.com",
     },
     (token, tokenSecret, profile, done) => {
       // console.log(token);
@@ -106,10 +106,10 @@ app.get("/twitter", passport.authenticate("twitter"));
 app.get(
   "/",
   passport.authenticate("twitter", {
-    failureRedirect: "http://127.0.0.1/user",
+    failureRedirect: "https://twitter-helpdesk-159.netlify.app",
   }),
   (req, res) => {  
-    res.redirect(`http://127.0.0.1:3001/home/${req.user.jwt_token}`)
+    res.redirect(`https://twitter-helpdesk-159.netlify.app//home/${req.user.jwt_token}`)
   }
 );
 
