@@ -109,7 +109,7 @@ app.get(
     failureRedirect: "https://twitter-helpdesk-159.netlify.app",
   }),
   (req, res) => {  
-    res.redirect(`https://twitter-helpdesk-159.netlify.app//home/${req.user.jwt_token}`)
+    res.redirect(`https://twitter-helpdesk-159.netlify.app/home/${req.user.jwt_token}`)
   }
 );
 
